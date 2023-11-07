@@ -6,7 +6,7 @@ export function useUtils() {
   const [responseImage, setResponseImage] = useState<string>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const API_KEY = "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";
+  const API_KEY = process.env.API_KEY;
 
   const client = new OpenAI({
     apiKey: API_KEY,
